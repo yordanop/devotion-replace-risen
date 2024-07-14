@@ -19,6 +19,13 @@ BlogPost.init(
         key: 'user_id'
       }
     },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [140]
+      }
+    },
     content: {
       type: DataTypes.STRING,
       allowNull: false,

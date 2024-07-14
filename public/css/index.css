@@ -1,0 +1,42 @@
+:root {
+
+    --main-text-color : #071952;
+    --main-bg-color : #FFB22C;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    margin: 0;
+    font-family: monospace, monospace;
+}
+
+header {
+    margin: 0 0 3vh 0;
+    padding: 2vh;
+    background-color: var(--main-text-color);
+}
+
+.card {
+    margin: 3vh;
+    border: 0.5vw solid var(--main-text-color) ;
+}
+
+.card > header {
+    color: var(--main-bg-color);
+}
+
+.nav-link {
+    font-size: 3vh;
+    margin: 2vw;
+    text-decoration: none;
+    color: var(--main-bg-color);
+}
+
+#main-title {
+    padding: 3vh;
+    background-color: var(--main-bg-color);
+    display:inline-block; 
+    color: var(--main-text-color);
+    font-size: 3vw;
+    
+}
