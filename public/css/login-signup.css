@@ -1,0 +1,21 @@
+.form-group > .btn-primary{
+    color: var(--main-bg-color);
+    background-color: var(--main-text-color);
+    border: 0;
+    height: 5vh;
+    width: 10vw;
+    font-size: large;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-around;
+    margin: 2vh;
+}
+.login-card {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

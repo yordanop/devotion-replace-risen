@@ -9,6 +9,12 @@ body {
     background-color: var(--main-bg-color);
     margin: 0;
     font-family: monospace, monospace;
+    color: var(--main-text-color);
+}
+
+button {
+    background-color: #00000000;
+    border: none;
 }
 
 header {
