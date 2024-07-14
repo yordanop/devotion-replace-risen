@@ -1,5 +1,15 @@
+b {
+    padding: 1.5vh;
+}
+.summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--main-text-color);
+    color: var(--main-bg-color);
+}
 
-.btn-container {
+.anchor-container {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -7,12 +17,13 @@
     width: 100vw;
     align-items: flex-end;
     bottom: 2vh;
+    
 }
 .add-post {
     font-size: 3vh;
     color: var(--main-bg-color);
     background-color: var(--main-text-color);
     padding: 2vw;
-    
+    text-decoration: none;
     align-self: end;
 }

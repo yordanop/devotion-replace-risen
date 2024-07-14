@@ -25,6 +25,10 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path}`);
+  next();
+});
 
 const hbs = exphbs.create({ helpers });
 

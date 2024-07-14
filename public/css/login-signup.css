@@ -1,3 +1,10 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2vh;
+}
+
 .form-group > .btn-primary{
     color: var(--main-bg-color);
     background-color: var(--main-text-color);
@@ -5,17 +12,15 @@
     height: 5vh;
     width: 10vw;
     font-size: large;
+    margin: auto;
 }
 
-.form-group {
-    display: flex;
-    justify-content: space-around;
-    margin: 2vh;
-}
-.login-card {
-    width: 100vw;
+
+div[class$="card"] {
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }

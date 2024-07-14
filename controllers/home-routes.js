@@ -20,8 +20,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       blogposts, 
-      loggedIn: req.session.loggedIn,
-      dashboard : false
+      loggedIn: req.session.loggedIn
     });
   } catch (err) {
     console.log(err);
@@ -50,15 +49,22 @@ router.get('/dashboard', withAuth, async (req, res) => {
       blogpost.get({ plain: true })
     );
 
-    res.render('homepage', {
+    res.render('dashboard', {
       blogposts, 
-      loggedIn: req.session.loggedIn,
-      dashboard : true
+      loggedIn: req.session.loggedIn
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
+});
+
+// New post route
+router.get('/new_post', withAuth, (req, res) => {
+    res.render('new-post', {
+      loggedIn: req.session.loggedIn
+    });
+    return;
 });
 
 // Login route

@@ -1,13 +1,5 @@
-<head>
-    <link rel="stylesheet" href="/css/dashboard.css">
-</head>
+
 {{#each blogposts as |blogpost|}}
 {{> blogpost-content}}
 {{/each}} 
 
-{{#if dashboard}}
-<div class="btn-container">
-    <button class="add-post"><b>+ New Post</b></button>
-</div>
-
-{{/if}}

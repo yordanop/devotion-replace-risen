@@ -1,0 +1,12 @@
+<head>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+{{#each blogposts as |blogpost|}}
+{{> blogpost-summary}}
+{{/each}} 
+
+
+<div class="anchor-container">
+    <a href="./new_post" class="add-post"><b>+ New Post</b></a>
+</div>
