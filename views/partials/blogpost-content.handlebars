@@ -1,13 +1,17 @@
 <section class="card">
-  {{!-- <a href="/gallery/{{id}}"> --}}
+  {{#if loggedIn}}
+  <a href="/blogpost/{{blogpost_id}}">
+  {{else}}
+  <a href="/login">
+  {{/if}}
     <header>
       <div>
-        {{title}}
+        <b class="post-title">{{title}}</b>
       </div>
       <div>
-        <p>Posted by {{user.username}} on {{create_date}} </p>
+        <small class="post-info">Posted by {{user.username}} on {{format_date create_date}} </small>
       </div>
     </header>
     <p>{{content}} </p>
-  {{!-- </a> --}}
+  </a>
 </section>

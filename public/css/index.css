@@ -2,6 +2,7 @@
 
     --main-text-color : #071952;
     --main-bg-color : #FFB22C;
+    --alt-bg-color : #a77725;
 }
 
 body {
@@ -18,12 +19,26 @@ header {
 
 .card {
     margin: 3vh;
-    border: 0.5vw solid var(--main-text-color) ;
+    border: 0.5vw solid var(--main-text-color);
 }
 
-.card > header {
-    color: var(--main-bg-color);
+.card > a{
+    text-decoration: none;
+    color: var(--main-text-color);
 }
+
+
+.card > a > header {
+    color: var(--main-bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-title {
+    font-size: 3vh;
+}
+
 
 .nav-link {
     font-size: 3vh;
