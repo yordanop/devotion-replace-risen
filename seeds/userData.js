@@ -28,6 +28,13 @@ const userdata = [
   }
 ];
 
-const seedUser = () => User.bulkCreate(userdata);
+const seedUser = async () => {
+  try {
+    await User.bulkCreate(userdata, { individualHooks: true });
+    console.log('Users have been seeded');
+  } catch (error) {
+    console.error('Failed to seed users:', error);
+  }
+};
 
 module.exports = seedUser;
