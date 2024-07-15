@@ -1,0 +1,24 @@
+section {
+    width: 95vw;
+}
+
+#all-post-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.comment {
+    padding: 1vw 4vh;
+    border-bottom: .4vh solid var(--main-text-color);
+}
+
+.card > header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--main-bg-color);
+}
+

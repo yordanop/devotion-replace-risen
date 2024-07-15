@@ -1,0 +1,28 @@
+<section class="card">
+  <header class="summary">
+    <div>
+      <b class="post-title">{{title}}</b>
+    </div>
+    <div>
+      <small class="post-info">Posted by {{user.username}} on {{format_date create_date}} </small>
+    </div>
+  </header>
+  <p>{{content}} </p>
+</section>
+
+
+<section class="comments">
+  {{#each comments as |comment|}}
+    <div class="comment">
+      <p>{{comment.content}}</p>
+      <p>Commented by: {{comment.user.username}}</p>
+    </div>
+  {{else}}
+    <p>No comments yet.</p>
+  {{/each}}
+</section>
+
+
+
+
+

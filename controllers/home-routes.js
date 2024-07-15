@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { BlogPost, User } = require('../models')
+const { BlogPost, User, Comment } = require('../models')
 const withAuth = require('../utils/auth');
 
 // GET all blogposts for homepage
@@ -28,9 +28,40 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET one Blogpost
+router.get('/blogpost/:blogpost_id', async (req, res) => {
+
+  try {
+    const dbBlogpostData = await BlogPost.findByPk(req.params.blogpost_id, {
+      include: [
+        {
+          model: Comment,
+          include: [
+            { model: User }
+          ]
+        },
+        { model: User }
+      ]
+    });
+
+    const blogpost = dbBlogpostData.get({ plain: true });
+    console.log('-------------------------------------------')
+    console.log(blogpost)
+    console.log('-------------------------------------------')
+    res.render('blogpost', { 
+      blogpost, 
+      loggedIn: req.session.loggedIn 
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
+});
 
 
-// Dashboard route
+
+// Dashboard route, GET all blogposts from user
 router.get('/dashboard', withAuth, async (req, res) => {
 
   try {

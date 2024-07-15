@@ -3,7 +3,7 @@ const newpostFormHandler = async (event) => {
   
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
-
+    const user_id = 3;
   
     if (title && content) {
       try {

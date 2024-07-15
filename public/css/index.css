@@ -48,7 +48,7 @@ header {
 
 .nav-link {
     font-size: 3vh;
-    margin: 2vw;
+    margin: 0 2vw;
     text-decoration: none;
     color: var(--main-bg-color);
 }

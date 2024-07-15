@@ -23,14 +23,14 @@ BlogPost.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [140]
+        len: [1, 140]
       }
     },
     content: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [140]
+        len: [1, 140]
       }
     },
     create_date: {
