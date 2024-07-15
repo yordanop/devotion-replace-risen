@@ -45,9 +45,7 @@ router.get('/blogpost/:blogpost_id', async (req, res) => {
     });
 
     const blogpost = dbBlogpostData.get({ plain: true });
-    console.log('-------------------------------------------')
-    console.log(blogpost)
-    console.log('-------------------------------------------')
+    
     res.render('blogpost', { 
       blogpost, 
       loggedIn: req.session.loggedIn 

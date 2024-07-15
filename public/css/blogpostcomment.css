@@ -2,12 +2,20 @@ section {
     width: 95vw;
 }
 
-#all-post-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+input {
+    width: 70vw;
+    padding: 1vw;
+    margin: 1vw;
+}
 
+label {
+    color: var(--main-bg-color);
+    font-weight: 700;
+    font-size: 3vh;
+}
+
+.comments {
+    padding: 0 0 15vh 0;
 }
 
 .comment {
@@ -22,3 +30,37 @@ section {
     color: var(--main-bg-color);
 }
 
+
+.add-comment {
+    background-color: var(--alt-bg-color);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    align-items: flex-end;
+    bottom: 2vh;  
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.btn-primary {
+    font-size: 2vh;
+    color: var(--main-bg-color);
+    background-color: var(--main-text-color);
+    padding: 1vh 2vw;
+    border: none;
+}
+
+#all-post-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

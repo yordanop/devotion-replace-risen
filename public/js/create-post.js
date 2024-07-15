@@ -3,7 +3,6 @@ const newpostFormHandler = async (event) => {
   
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
-    const user_id = 3;
   
     if (title && content) {
       try {
@@ -18,11 +17,11 @@ const newpostFormHandler = async (event) => {
         } else {
           const errorText = await response.text();
           console.error('Failed to create new post:', errorText);
-          alert('Failed to create new post. Check console for details.');
+          alert('Failed to create new post.');
         }
       } catch (error) {
         console.error('Error:', error);
-        alert('Failed to create new post. Check console for details.');
+        alert('Failed to create new post.');
       }
     }
   };

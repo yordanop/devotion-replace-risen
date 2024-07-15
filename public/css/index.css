@@ -2,7 +2,7 @@
 
     --main-text-color : #071952;
     --main-bg-color : #FFB22C;
-    --alt-bg-color : #a77725;
+    --alt-bg-color : #a77725a1;
 }
 
 body {
@@ -21,6 +21,10 @@ header {
     margin: 0 0 3vh 0;
     padding: 2vh;
     background-color: var(--main-text-color);
+}
+
+p {
+    padding: 0 4vw;
 }
 
 .card {
