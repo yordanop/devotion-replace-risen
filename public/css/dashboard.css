@@ -20,7 +20,7 @@
     font-size: 3vh;
     color: var(--main-bg-color);
     background-color: var(--main-text-color);
-    padding: 2vw;
+    padding: 1vh 2vw;
     text-decoration: none;
     align-self: end;
 }

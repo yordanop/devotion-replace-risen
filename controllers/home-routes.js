@@ -28,8 +28,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET one Blogpost
-router.get('/blogpost/:blogpost_id', async (req, res) => {
+// GET one Blogpost with comments
+router.get('/blogposts/:blogpost_id', async (req, res) => {
 
   try {
     const dbBlogpostData = await BlogPost.findByPk(req.params.blogpost_id, {
@@ -48,7 +48,8 @@ router.get('/blogpost/:blogpost_id', async (req, res) => {
     
     res.render('blogpost', { 
       blogpost, 
-      loggedIn: req.session.loggedIn 
+      loggedIn: req.session.loggedIn,
+
     });
   } catch (err) {
     console.log(err);
@@ -56,6 +57,7 @@ router.get('/blogpost/:blogpost_id', async (req, res) => {
   }
 
 });
+
 
 
 

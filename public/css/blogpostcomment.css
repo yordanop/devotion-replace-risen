@@ -50,12 +50,14 @@ label {
 }
 
 .btn-primary {
-    font-size: 2vh;
+    font-size: 3vh;
     color: var(--main-bg-color);
     background-color: var(--main-text-color);
     padding: 1vh 2vw;
     border: none;
 }
+
+
 
 #all-post-data {
     display: flex;
