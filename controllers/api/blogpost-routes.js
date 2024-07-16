@@ -12,7 +12,28 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
 }
-})
+});
+
+// DELETE route to delete a blog post
+router.delete('/delete/:blogpost_id', async (req, res) => {
+  try {
+    const blogpostId = req.params.blogpost_id;
+
+    const blogpost = await BlogPost.findByPk(blogpostId);
+
+    if (!blogpost) {
+      return res.status(404).json({ message: 'Blog post not found' });
+    }
+
+    // Delete the blog post
+    await blogpost.destroy();
+
+    res.status(200).json({ message: 'Blog post deleted successfully' });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 
 // ROUTE to POST new blogpost

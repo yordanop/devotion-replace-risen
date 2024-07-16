@@ -14,6 +14,7 @@ const signupFormHandler = async (event) => {
       });
   
       if (response.ok) {
+        alert('BNew account created successfully!');
         document.location.replace('/');
       } else {
         alert('Failed to sign up.');

@@ -12,8 +12,9 @@ const newCommentFormHandler = async (event) => {
         });
         console.log(response)
         if (response.ok) {
-        console.log(response)
-        
+
+          console.log(response)
+          alert('New comment created successfully!');
           document.location.reload();
         } else {
           const errorText = await response.text();

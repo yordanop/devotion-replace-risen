@@ -4,6 +4,11 @@ label, input {
     margin: 0 1vh;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -23,6 +28,9 @@ label, input {
 }
 
 .btn-primary {
+
+    margin: 0 auto 2vh auto;
+    width: 30vw;
     font-size: 3vh;
     color: var(--main-bg-color);
     background-color: var(--main-text-color);
