@@ -100,7 +100,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       where: { user_id: req.session.user_id }
     });
 
-    const blogposts = null;
+    let blogposts = null;
     if (blogpostData.length){
       blogposts = blogpostData.map((blogpost) =>
         blogpost.get({ plain: true })
