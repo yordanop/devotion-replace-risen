@@ -84,9 +84,10 @@ router.get('/edit/:blogpost_id', async (req, res) => {
 });
 
 
-
 // Dashboard route, GET all blogposts from user
 router.get('/dashboard', withAuth, async (req, res) => {
+
+  console.log(req.session)
 
   try {
     const blogpostData = await BlogPost.findAll({
