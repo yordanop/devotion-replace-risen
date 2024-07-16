@@ -4,7 +4,32 @@
 
   This is a CMS-blog called Tech Blog where you can make posts and comments
 
-  ![alt text](./route_to_image.png)
+
+  Github repository : https://github.com/yordanop/devotion-replace-risen
+
+  Deployed app: https://tech-blog-5znp.onrender.com/
+
+
+  ## Views of the app
+
+  Blogpost View :
+  ![Blogpost View](./public/assets/Blogpost_Info.png)
+
+  Dashboard View :
+  ![Dashboard View](./public/assets/Dashboard.png)
+
+  Home View :
+  ![Home View](./public/assets/Home.png)
+
+  Login View :
+  ![Login View](./public/assets/Login.png)
+
+  Signup View :
+  ![Signup View](./public/assets/Signup.png)
+
+  Post to update View :
+  ![Post to update View](./public/assets/Update_Blogpost.png)
+  
 
   ## Questions
 
@@ -28,6 +53,7 @@ just enter the deployed app link
 Create an account, login, you will be presented with all posts made
 
 ## Credits
+I want to thank and recognize the support from my teammates
 
 
 
@@ -37,13 +63,5 @@ Create an account, login, you will be presented with all posts made
 
    [MIT](https://choosealicense.com/licenses/mit/)
 
-
-## Features
-
-dsad
-
-## How to Contribute
-
-sds
 
   
