@@ -1,3 +1,5 @@
+
+// Make a post request to the route where it will end session
 const logout = async () => {
     const response = await fetch('/api/users/logout', {
       method: 'POST',

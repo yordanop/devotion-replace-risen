@@ -2,7 +2,7 @@ const newCommentFormHandler = async (event) => {
     event.preventDefault();
   
     const content = document.querySelector('#content').value.trim();
-  
+    // Send content to create new comment
     if (content) {
       try {
         const response = await fetch('/api/comments', {

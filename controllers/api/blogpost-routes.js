@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { BlogPost, User } = require('../../models');
 
-
+// ROUTE to get all posts
 router.get('/', async (req, res) => {
 
   try{
@@ -12,10 +12,10 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
 }
-
-
 })
 
+
+// ROUTE to POST new blogpost
 router.post('/', async (req, res) => {
 
     req.body['user_id'] = req.session.user_id;
@@ -29,9 +29,8 @@ router.post('/', async (req, res) => {
     }
 })
 
-
+// ROUTE to UPDATE a blogpost
 router.put('/:blogpost_id', async (req, res) => {
-
 
     const { title, content } = req.body;
     try {
@@ -52,7 +51,6 @@ router.put('/:blogpost_id', async (req, res) => {
       res.json(`Post updated`);
     }
     catch (err) {
-      // Log the error details
       res.status(500).json({ message: 'Internal Server Error', error: err.message });
     }
 })

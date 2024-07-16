@@ -5,9 +5,10 @@ const newCommentFormHandler = async (event) => {
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
   
+    // Send content to update specific post
     if (title && content) {
       try {
-        const response = await fetch(`/api/blogposts/edit/${blogpostId}`, {
+        const response = await fetch(`/api/blogposts/${blogpostId}`, {
             method: 'PUT',
             body: JSON.stringify({ title, content }),
             headers: {

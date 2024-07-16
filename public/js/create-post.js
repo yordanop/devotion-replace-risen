@@ -3,7 +3,8 @@ const newpostFormHandler = async (event) => {
   
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
-  
+
+    // Send content to create new post
     if (title && content) {
       try {
         const response = await fetch('/api/blogpost', {

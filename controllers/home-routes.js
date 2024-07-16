@@ -71,20 +71,16 @@ router.get('/edit/:blogpost_id', async (req, res) => {
 
     const blogpost = dbBlogpostData.get({ plain: true });
 
-    console.log(blogpost)
-    
     res.render('edit-blogpost', { 
       blogpost, 
       loggedIn: req.session.loggedIn,
-      
     });
+
   } catch (err) {
+
     console.log(err);
     res.status(500).json(err);
   }
-
-  res.render('edit-blogpost')
-
 });
 
 
