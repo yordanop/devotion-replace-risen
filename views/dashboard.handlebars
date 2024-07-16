@@ -5,7 +5,9 @@
 {{!-- Send post with all comments to partial  blogpost-summary--}}
 {{#each blogposts as |blogpost|}}
 {{> blogpost-summary}}
-{{/each}} 
+{{else}}
+    <p>No comments yet.</p>
+{{/each}}
 
 
 <div class="anchor-container">
