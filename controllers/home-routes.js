@@ -59,6 +59,34 @@ router.get('/blogposts/:blogpost_id', async (req, res) => {
 });
 
 
+// GET one Blogpost to edit
+router.get('/edit/:blogpost_id', async (req, res) => {
+  
+  try {
+    const dbBlogpostData = await BlogPost.findByPk(req.params.blogpost_id, {
+      include: [
+        { model: User }
+      ]
+    });
+
+    const blogpost = dbBlogpostData.get({ plain: true });
+
+    console.log(blogpost)
+    
+    res.render('edit-blogpost', { 
+      blogpost, 
+      loggedIn: req.session.loggedIn,
+      
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
+  res.render('edit-blogpost')
+
+});
+
 
 
 // Dashboard route, GET all blogposts from user

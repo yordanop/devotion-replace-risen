@@ -2,34 +2,19 @@ const router = require('express').Router();
 const { BlogPost, User } = require('../../models');
 
 
+router.get('/', async (req, res) => {
 
-// GET one Blogpost
-router.get('/edit/:blogpost_id', async (req, res) => {
-  
-  try {
-    const dbBlogpostData = await BlogPost.findByPk(req.params.blogpost_id, {
-      include: [
-        { model: User }
-      ]
-    });
+  try{
 
-    const blogpost = dbBlogpostData.get({ plain: true });
+    const allBlogPosts = await BlogPost.findAll();
 
-    console.log(blogpost)
-    
-    res.render('edit-blogpost', { 
-      blogpost, 
-      loggedIn: req.session.loggedIn,
-      
-    });
+    res.status(200).json(allBlogPosts);
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
-  }
+}
 
-  res.render('edit-blogpost')
 
-});
+})
 
 router.post('/', async (req, res) => {
 
@@ -45,18 +30,16 @@ router.post('/', async (req, res) => {
 })
 
 
-router.put('/edit/:blogpost_id', async (req, res) => {
-    console.log('--------------------------------------')
-    console.log(req.body)
-    console.log('--------------------------------------')
+router.put('/:blogpost_id', async (req, res) => {
+
 
     const { title, content } = req.body;
     try {
-      await BlogPost.update(
+      const updatedBlogPost = await BlogPost.update(
         { title, content },
         {
           where: {
-            blogpost_id: req.session.user_id,
+            blogpost_id: req.params.blogpost_id,
           }
         }
       );
